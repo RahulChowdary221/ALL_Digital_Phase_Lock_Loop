@@ -280,7 +280,7 @@ In steady state, `phase_error` will never sit at zero. The BBPD always outputs +
 
 **Testbench clock configuration (`tb_adpll_top.v`):**
 
-```verilog
+'``verilog
 always #5    sys_clk = ~sys_clk;  // 100 MHz  (10 ns period)
 always #25   ref_clk = ~ref_clk;  // 20 MHz   (50 ns period)
 ```
@@ -297,21 +297,17 @@ always #25   ref_clk = ~ref_clk;  // 20 MHz   (50 ns period)
 
 | Signal | Before Lock | After Lock |
 |---|---|---|
-| `tuning_trace` | Ramping up or down | Stable near 858,993,459 |
-| `error_trace` | Long +1 or −1 plateaus | Rapid ±1 alternation every few cycles |
-| `clk_out` | Frequency drifting | Stable 20 MHz, edges tracking `ref_clk` |
+| tuning_trace | Ramping up or down | Stable near 858,993,459 |
+| 'error_trace' | Long +1 or −1 plateaus | Rapid ±1 alternation every few cycles |
+| `clk_out' | Frequency drifting | Stable 20 MHz, edges tracking `ref_clk' |
 
-**Waveform screenshots:**
+*Waveform screenshots:**
 
-> Replace the lines below with your actual Vivado screenshots once captured:
->
-> ```markdown
-> 
-> ![Wave Form Lock State](waveform.png)
-> [RTL Scematic](waveform.png)
-> ```
 
----
+> [Wave Form Lock State](waveform.png)
+> [RTL Scematic](rtl.png)
+> [Resource Utilization](ResourceUtilization.png)
+
 
 ## Resource Utilisation
 
@@ -330,7 +326,7 @@ Because the Digital Loop Filter (DLF) was intentionally designed as a multiplier
 
 ## Repository Structure
 
-```
+
 ALL_Digital_Phase_Lock_Loop/
 │
 ├── src/
@@ -348,7 +344,7 @@ ALL_Digital_Phase_Lock_Loop/
 │   └── waveform_locked.png   # XSim waveform showing lock condition
 │
 └── README.md
-```
+
 
 
 
