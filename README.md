@@ -307,7 +307,8 @@ always #25   ref_clk = ~ref_clk;  // 20 MHz   (50 ns period)
 >
 > ```markdown
 > 
-> ![RTL Schematic](images/rtl_schematic.png)
+> ![Wave Form Lock State](waveform.png)
+> [RTL Scematic](waveform.png)
 > ```
 
 ---
