@@ -41,3 +41,4 @@ The system was verified using a Vivado top-level testbench.
 The simulation proves that the ADPLL aggressively hunts the reference edge and maintains a stable lock, with the error trace rapidly limit-cycling between `+1` and `-1` (the standard operational state of a locked Bang-Bang topology).
 
 
+
