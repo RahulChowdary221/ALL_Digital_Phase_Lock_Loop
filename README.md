@@ -314,18 +314,17 @@ always #25   ref_clk = ~ref_clk;  // 20 MHz   (50 ns period)
 
 ## Resource Utilisation
 
-Estimated post-synthesis on xc7z020clg484-1 (Zynq-7000):
 
-| Resource | Used | Available | Utilisation |
-|---|---|---|---|
-| Slice LUTs | ~45 | 53,200 | < 0.1% |
-| Flip-Flops (FFs) | ~70 | 106,400 | < 0.1% |
-| DSP Blocks | **0** | 220 | **0%** |
-| BUFG Clock Buffers | 2 | 32 | 6% |
-| Block RAM | 0 | 140 | 0% |
+## 📉 FPGA Resource Utilization (Target: xc7z020)
+Because the Digital Loop Filter (DLF) was intentionally designed as a multiplier-less architecture using a Bang-Bang Phase Detector, the system consumes zero DSP blocks, making it highly area-efficient.
 
-> Zero DSP blocks is a direct result of the multiplier-free PI controller design made possible by the Bang-Bang detector's ±1 output constraint.
-
+| Resource Type | Available | Utilized | Utilization % |
+| :--- | :--- | :--- | :--- |
+| **Slice LUTs** | 53,200 | 78 | < 1.00% |
+| **Slice Registers** | 106,400 | 62 | < 1.00% |
+| **Bonded IOB** | 200 | 4 | 2.00% |
+| **BUFGCTRL** | 32 | 2 | 6.25% |
+| **DSP Blocks** | 220 | 0 | 0.00% |
 ---
 
 ## Repository Structure
@@ -350,36 +349,9 @@ ALL_Digital_Phase_Lock_Loop/
 └── README.md
 ```
 
----
 
-## How to Run in Vivado
 
-**Step 1 — Create a new RTL project**
-```
-File → Project → New → RTL Project
-Target part: xc7z020clg484-1
-```
 
-**Step 2 — Add design sources**
-
-Add all `.v` files from `src/` as Design Sources. Set `ADPLL_top.v` as the Top Module.
-
-**Step 3 — Add simulation source**
-
-Add `sim/tb_adpll_top.v` as a Simulation Source only.
-
-**Step 4 — Run Behavioral Simulation**
-```
-Flow Navigator → Simulation → Run Behavioral Simulation
-```
-
-In the XSim toolbar click **Run All (F3)**. The loop needs at least 50 µs to converge — do not use the default 1 µs run time.
-
-**Step 5 — Observe the lock**
-
-Add `error_trace` (Signed Decimal) and `tuning_trace` (Unsigned Decimal) to the waveform window. Zoom to the 50–100 µs region. A locked system shows `error_trace` alternating ±1 rapidly and `tuning_trace` stable near 858,993,459.
-
----
 
 ## Learning Journal
 
@@ -395,7 +367,7 @@ This project was built from first principles — starting from the question *"wh
 
 **On the integrator:** Resetting the integral accumulator to zero when error is zero feels safe but destroys the system. The integrator's job is to remember the frequency offset it learned over time. If it resets when error momentarily touches zero, the loop crashes immediately after locking. An unaddressed register holds its state — that silence is the correct behaviour.
 
----
+
 
 ## References
 
