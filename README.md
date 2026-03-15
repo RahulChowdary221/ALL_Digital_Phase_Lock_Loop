@@ -306,7 +306,7 @@ always #25   ref_clk = ~ref_clk;  // 20 MHz   (50 ns period)
 > Replace the lines below with your actual Vivado screenshots once captured:
 >
 > ```markdown
-> ![Locked Waveform](images/waveform_locked.png)
+> 
 > ![RTL Schematic](images/rtl_schematic.png)
 > ```
 
