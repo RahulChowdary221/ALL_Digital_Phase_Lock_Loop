@@ -404,6 +404,3 @@ This project was built from first principles — starting from the question *"wh
 - Xilinx UG901 — Vivado Design Suite: HDL Synthesis Guide
 - HDLBits — Verilog Practice: [https://hdlbits.01xz.net](https://hdlbits.01xz.net)
 
----
-
-*Built as part of an independent VLSI RTL design study — EC Engineering, 2025–26*
