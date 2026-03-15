@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Digital Phase-Lock-Loop.srcs/sources_1/new/ADPLL_top.v" \
+"../../../../Digital Phase-Lock-Loop.srcs/sources_1/new/Bang_Bang_PD.v" \
+"../../../../Digital Phase-Lock-Loop.srcs/sources_1/new/DLF.v" \
+"../../../../Digital Phase-Lock-Loop.srcs/sources_1/new/Nco.v" \
+"../../../../Digital Phase-Lock-Loop.srcs/sim_1/new/tb_ADPLL.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

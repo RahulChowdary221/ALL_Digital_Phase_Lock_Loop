@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.srcs/sim_1/new/tb_ADPLL.v,1773558878,verilog,,,,tb_ADPLL,,,,,,,,
+C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.srcs/sources_1/new/ADPLL_top.v,1773559189,verilog,,C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.srcs/sources_1/new/Bang_Bang_PD.v,,ADPLL_top,,,,,,,,
+C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.srcs/sources_1/new/Bang_Bang_PD.v,1773552040,verilog,,C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.srcs/sources_1/new/DLF.v,,Bang_Bang_PD,,,,,,,,
+C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.srcs/sources_1/new/DLF.v,1773550854,verilog,,C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.srcs/sources_1/new/Nco.v,,DLF,,,,,,,,
+C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.srcs/sources_1/new/Nco.v,1773491149,verilog,,C:/Digital PLL/Digital Phase-Lock-Loop/Digital Phase-Lock-Loop.srcs/sim_1/new/tb_ADPLL.v,,Nco,,,,,,,,
